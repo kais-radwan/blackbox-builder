@@ -95,8 +95,8 @@ export function Hero() {
         initial={{ opacity: 0, translateX: 10 }}
         animate={{ opacity: 0.7, scale: 1, translateX: 0 }}
         transition={{ duration: 2, delay: 0.4 }}
-        src="/hero-ill.png"
-        className="opacity-50 absolute top-42 hidden md:block"
+        src="/hero-ill-c.png"
+        className="opacity-50 absolute top-48 hidden md:block"
       />
 
       <motion.img
