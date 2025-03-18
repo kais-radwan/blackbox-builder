@@ -1,44 +1,10 @@
 import { ChevronDown, Sparkles } from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import BlurText from "./ui/blur-text";
 
 export function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const stickyRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-
-  // Calculate the scroll boundaries
-  const [yStart, setYStart] = useState(0);
-  const [yEnd, setYEnd] = useState(0);
-  // const [inputPlaceholder, setInputPlaceholder] = useState("");
-
-  useEffect(() => {
-    if (!containerRef.current || !stickyRef.current) return;
-
-    const updateBoundaries = () => {
-      const containerTop = containerRef.current?.offsetTop ?? 0;
-      const containerHeight = containerRef.current?.offsetHeight ?? 0;
-      const stickyHeight = stickyRef.current?.offsetHeight ?? 0;
-
-      setYStart(containerTop - 80); // 80px offset from top
-      setYEnd(containerTop + containerHeight - stickyHeight - 200); // 40px padding from bottom
-    };
-
-    updateBoundaries();
-    window.addEventListener("resize", updateBoundaries);
-    return () => window.removeEventListener("resize", updateBoundaries);
-  }, []);
-
-  const y = useTransform(scrollY, [yStart, yEnd], [yStart, yEnd], {
-    clamp: true,
-  });
-
   return (
-    <div
-      ref={containerRef}
-      className="w-full flex flex-col items-center pt-20  h-screen overflow-hidden md:overflow-visible relative"
-    >
+    <div className="w-full flex flex-col items-center pt-20  h-screen overflow-hidden md:overflow-visible relative">
       <motion.div
         className="flex flex-col w-full items-center justify-center gap-12 z-10"
         style={{

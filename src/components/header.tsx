@@ -21,8 +21,8 @@ export function Header() {
         ))}
       </div>
       <div className="flex items-center gap-2 w-42 justify-end">
-        <button className="p-2 text-sm px-5 bg-white text-black cursor-pointer hover:opacity-80 transition-all duration-500">
-            Sign up
+        <button className="p-2 text-sm px-4 bg-white text-black cursor-pointer hover:opacity-80 transition-all duration-500">
+          Sign up
         </button>
       </div>
     </header>
