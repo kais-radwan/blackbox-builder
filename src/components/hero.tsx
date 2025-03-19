@@ -1,6 +1,7 @@
 import { ChevronDown, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { BlurIn } from "./ui/blur-in";
+import { RevealFx } from "./ui/reveal";
 
 export function Hero() {
   return (
@@ -11,28 +12,31 @@ export function Hero() {
           willChange: "transform",
         }}
       >
-        <div className="flex flex-col items-center justify-center text-center gap-2 z-10">
-          <BlurIn
-            className="text-4xl md:text-5xl font-semibold w-full max-w-sm leading-tight"
-            word="Just Build it with BLACKBOX"
-          />
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.7 }}
-            transition={{ duration: 0.5, delay: 0.7 }}
-            className="text-md opacity-70"
-          >
-            The AI builder loved by everyone
-          </motion.p>
+        <div className="flex flex-col items-center justify-center text-center gap-2 z-10 pt-10">
+          <RevealFx delay={0} translateY={1} speed="medium">
+            <h1 className="text-4xl md:text-5xl font-semibold w-full max-w-sm leading-tight">
+              Just Build it with BLACKBOX AI
+            </h1>
+          </RevealFx>
+
+          <RevealFx delay={0.3} translateY={1} speed="medium">
+            <motion.p className="text-md opacity-70">
+              The AI builder loved by everyone
+            </motion.p>
+          </RevealFx>
 
           <div className="flex items-center justify-center gap-2 my-4 z-20">
-            <button className="font-semibold p-2 px-4 bg-white text-black text-sm cursor-pointer hover:opacity-80 transition-all duration-500">
-              Start building
-            </button>
+            <RevealFx delay={0.7} speed="medium">
+              <button className="font-semibold p-2 px-4 bg-white text-black text-sm cursor-pointer hover:opacity-80 transition-all duration-500 min-w-max">
+                Start building
+              </button>
+            </RevealFx>
 
-            <button className="font-semibold p-2 px-4 bg-[#151515] text-sm cursor-pointer hover:bg-[#212121] transition-all duration-500">
-              Watch video
-            </button>
+            <RevealFx delay={1.2} speed="medium">
+              <button className="font-semibold p-2 px-4 bg-[#151515] text-sm cursor-pointer hover:bg-[#212121] transition-all duration-500 min-w-max">
+                Watch video
+              </button>
+            </RevealFx>
           </div>
         </div>
       </motion.div>
@@ -63,13 +67,15 @@ export function Hero() {
         <ChevronDown />
       </div>
 
-      <motion.img
-        initial={{ opacity: 0, translateX: 10 }}
-        animate={{ opacity: 0.7, scale: 1, translateX: 0 }}
-        transition={{ duration: 2, delay: 0.4 }}
-        src="/hero-ill-c.png"
-        className="opacity-50 max-w-[80%] hidden md:block"
-      />
+      <RevealFx delay={0.3} translateY={2} speed="slow">
+        <motion.img
+          initial={{ opacity: 0, translateX: 10 }}
+          animate={{ opacity: 0.7, scale: 1, translateX: 0 }}
+          transition={{ duration: 2, delay: 0.4 }}
+          src="/hero-ill-c.png"
+          className="opacity-50 max-w-[80%] hidden md:block"
+        />
+      </RevealFx>
 
       <motion.img
         initial={{ opacity: 0, translateX: 10 }}
