@@ -1,6 +1,5 @@
 import { ChevronDown, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import BlurText from "./ui/blur-text";
 import { BlurIn } from "./ui/blur-in";
 
 export function Hero() {

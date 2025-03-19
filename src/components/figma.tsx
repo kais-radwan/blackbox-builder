@@ -1,5 +1,4 @@
 import { ArrowRight, Link } from "lucide-react";
-import BlurText from "./ui/blur-text";
 
 export function Figma() {
   return (
