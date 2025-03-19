@@ -1,10 +1,11 @@
 import { ChevronDown, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import BlurText from "./ui/blur-text";
+import { BlurIn } from "./ui/blur-in";
 
 export function Hero() {
   return (
-    <div className="w-full flex flex-col items-center pt-20  h-screen overflow-hidden md:overflow-visible relative">
+    <div className="w-full flex flex-col items-center pt-20 h-screen overflow-hidden md:overflow-visible relative">
       <motion.div
         className="flex flex-col w-full items-center justify-center gap-12 z-10"
         style={{
@@ -12,9 +13,9 @@ export function Hero() {
         }}
       >
         <div className="flex flex-col items-center justify-center text-center gap-2 z-10">
-          <BlurText
+          <BlurIn
             className="text-4xl md:text-5xl font-semibold w-full max-w-sm leading-tight"
-            text="Just Build it with BLACKBOX"
+            word="Just Build it with BLACKBOX"
           />
           <motion.p
             initial={{ opacity: 0 }}
@@ -26,11 +27,11 @@ export function Hero() {
           </motion.p>
 
           <div className="flex items-center justify-center gap-2 my-4 z-20">
-            <button className="p-2 px-4 bg-white text-black text-sm cursor-pointer hover:opacity-80 transition-all duration-500">
+            <button className="font-semibold p-2 px-4 bg-white text-black text-sm cursor-pointer hover:opacity-80 transition-all duration-500">
               Start building
             </button>
 
-            <button className="p-2 px-4 bg-[#151515] text-sm cursor-pointer hover:bg-[#212121] transition-all duration-500">
+            <button className="font-semibold p-2 px-4 bg-[#151515] text-sm cursor-pointer hover:bg-[#212121] transition-all duration-500">
               Watch video
             </button>
           </div>
@@ -58,7 +59,7 @@ export function Hero() {
         </button>
       </motion.div>
 
-      <div className="flex flex-col absolute bottom-4 z-20 items-center animate-pulse hidden">
+      <div className="flex-col absolute bottom-4 z-20 items-center animate-pulse hidden">
         <span>Keep scrolling</span>
         <ChevronDown />
       </div>
