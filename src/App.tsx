@@ -1,3 +1,4 @@
+import { Clone } from "./components/clone";
 import { Figma } from "./components/figma";
 import { Header } from "./components/header";
 import { Hero } from "./components/hero";
@@ -10,10 +11,11 @@ function App() {
 
       <Hero />
 
-      <div className="mt-56"></div>
+      <div className="mt-24 md:mt-56"></div>
 
       <Proof />
       <Figma />
+      <Clone />
 
       <div className="min-h-screen"></div>
     </>
