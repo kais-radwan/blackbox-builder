@@ -6,10 +6,12 @@ import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Proof } from "./components/proof";
 import { Screenshots } from "./components/screenshots";
+import { Footer } from "./components/footer";
+import { Steps } from "./components/steps";
 
 function App() {
   const [activeSection, setActiveSection] = useState(0);
-  const totalSections = 4;
+  const totalSections = 5;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,6 +73,12 @@ function App() {
       <div className="section">
         <Screenshots />
       </div>
+
+      <div className="section">
+        <Steps />
+      </div>
+
+      <Footer />
     </>
   );
 }
