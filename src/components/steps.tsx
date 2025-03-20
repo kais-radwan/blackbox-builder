@@ -1,5 +1,6 @@
 import { RevealFx } from "./ui/reveal";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export function Steps() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,10 +38,16 @@ export function Steps() {
         ref={revealRef}
         className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-md mb-12 leading-tight">
+        <motion.h2
+          initial={{ filter: "blur(10px)", opacity: 0, translateY: 2 }}
+          whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
+          transition={{ delay: 0.7, duration: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-md mb-12 leading-tight"
+        >
           Build Whatever You Want
-        </h2>
-        <RevealFx speed="slow" className={`${!isVisible && "opacity-0"}`}>
+        </motion.h2>
+        <RevealFx speed="medium" className={`${!isVisible && "opacity-0"}`}>
           <img
             src="/builder-steps.png"
             className="min-w-[125%] md:min-w-[80%] md:w-[80%] border-r border-[#222] -mb-10"
