@@ -23,7 +23,7 @@ export function CallToAction() {
           viewport={{ once: true }}
           className="text-md text-gray-400 mb-10 max-w-lg mx-auto"
         >
-          Join thousands of developers who are already building faster and
+          Join millions of developers who are already building faster and
           smarter with BLACKBOX AI
         </motion.p>
 
