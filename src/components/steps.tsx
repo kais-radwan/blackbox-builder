@@ -51,6 +51,7 @@ export function Steps() {
           <img
             src="/builder-steps.png"
             className="min-w-[125%] md:min-w-[80%] md:w-[80%] border-r border-[#222] -mb-10"
+            loading="lazy"
           />
         </RevealFx>
         <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-b from-[rgba(0, 0, 0, 0)] to-white/5"></div>
