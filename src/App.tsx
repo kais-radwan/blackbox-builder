@@ -8,10 +8,11 @@ import { Proof } from "./components/proof";
 import { Screenshots } from "./components/screenshots";
 import { Footer } from "./components/footer";
 import { Steps } from "./components/steps";
+import { CallToAction } from "./components/cta";
 
 function App() {
   const [activeSection, setActiveSection] = useState(0);
-  const totalSections = 5;
+  const totalSections = 6;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,6 +77,10 @@ function App() {
 
       <div className="section">
         <Steps />
+      </div>
+
+      <div className="section">
+        <CallToAction />
       </div>
 
       <Footer />
