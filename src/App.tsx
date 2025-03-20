@@ -38,7 +38,7 @@ function App() {
     const sections = document.querySelectorAll(
       ".section",
     ) as NodeListOf<HTMLElement>;
-    sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
+    sections[index].scrollIntoView({ behavior: "smooth", block: "end" });
     setActiveSection(index);
   };
 

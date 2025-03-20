@@ -4,6 +4,7 @@ export function Screenshots() {
   return (
     <div className="w-full border-b flex items-center justify-center border-[#222] relative h-[80vh]">
       <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center">
+        <p className="text-sm opacity-60 z-20">(hover me and see)</p>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-xl leading-tight z-20">
           Turn Any <span className="text-[#F24E1E]">Screenshot</span>{" "}
           <span className="text-[#FFD322]">Into</span> a Functional{" "}
