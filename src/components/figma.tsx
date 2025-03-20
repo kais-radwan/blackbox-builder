@@ -24,7 +24,11 @@ export function Figma() {
             viewport={{ once: true }}
             className="flex items-center justify-center relative overflow-visible"
           >
-            <img src="/figma-file-frame.png" className="w-32 md:w-40 z-10" />
+            <img
+              src="/figma-file-frame.png"
+              className="w-32 md:w-40 z-10"
+              loading="lazy"
+            />
             <motion.div
               initial={{ width: 0 }}
               whileInView={{ width: "120vw" }}
@@ -69,7 +73,12 @@ export function Figma() {
               </p>
             </div>
 
-            <motion.img src="tesla-page.png" width="550" className="z-10" />
+            <motion.img
+              src="tesla-page.png"
+              width="550"
+              className="z-10"
+              loading="lazy"
+            />
 
             <motion.div className="h-[100vh] -top-[70%] right-14 border-r border-[#222] absolute z-0 hidden md:block"></motion.div>
           </motion.div>

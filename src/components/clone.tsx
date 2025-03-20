@@ -24,6 +24,7 @@ export function Clone() {
           viewport={{ once: true }}
           src="/clone-visual.png"
           className="min-w-[125%] md:min-w-full"
+          loading="lazy"
         />
 
         <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-b from-[rgba(0, 0, 0, 0)] to-[#263078]/30"></div>
