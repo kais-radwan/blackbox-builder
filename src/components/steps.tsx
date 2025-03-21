@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 export function Steps() {
   return (
     <div className="w-full mt-46 border-b flex items-start justify-center border-[#222] relative overflow-hidden">
-      <div
-        ref={revealRef}
-        className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center"
-      >
+      <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center">
         <motion.h2
           initial={{ filter: "blur(10px)", opacity: 0, translateY: 2 }}
           whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
