@@ -10,10 +10,9 @@ export function Figma() {
           whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-xl leading-tight"
+          className="text-3xl md:text-4xl font-semibold leading-tight"
         >
-          Go From <span className="gradientText">Figma to Live Website</span> in
-          Seconds
+          <span className="gradientText">Figma to Live Website</span> in Seconds
         </motion.h2>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
