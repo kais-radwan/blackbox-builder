@@ -1,3 +1,17 @@
+import { InfiniteSlider } from "./ui/slider";
+
+export function InfiniteSliderBasic() {
+  return (
+    <InfiniteSlider gap={24} reverse>
+      <img
+        src="/brands/logos.svg"
+        alt="Apple Music logo"
+        className="h-[30px] w-auto grayscale"
+      />
+    </InfiniteSlider>
+  );
+}
+
 export function Proof() {
   return (
     <div className="flex items-center justify-center w-full">
@@ -7,10 +21,7 @@ export function Proof() {
         </p>
 
         <div className="w-full overflow-hidden flex items-center justify-center">
-          <img
-            src="/logos.svg"
-            className="grayscale min-w-[180%] md:min-w-[80%]"
-          />
+          <InfiniteSliderBasic />
         </div>
       </div>
     </div>
