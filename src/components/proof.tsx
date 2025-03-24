@@ -20,8 +20,10 @@ export function Proof() {
           More than 10M developers and Fortune 500 companies using BLACKBOX
         </p>
 
-        <div className="w-full overflow-hidden flex items-center justify-center">
+        <div className="w-full overflow-hidden flex items-center justify-center relative">
+          <div className="absolute h-full w-40 right-0 top-0 bg-gradient-to-r from-transparent to-black z-20"></div>
           <InfiniteSliderBasic />
+          <div className="absolute h-full w-40 left-0 top-0 bg-gradient-to-l from-transparent to-black z-20"></div>
         </div>
       </div>
     </div>

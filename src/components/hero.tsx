@@ -13,8 +13,9 @@ export function Hero() {
       >
         <div className="flex flex-col items-center justify-center text-center gap-2 z-10 pt-10">
           <RevealFx delay={0} translateY={1} speed="medium">
-            <h1 className="text-4xl md:text-5xl font-semibold w-full max-w-sm leading-tight">
-              Just Build it with BLACKBOX AI
+            <h1 className="text-4xl md:text-5xl font-semibold w-full leading-tight">
+              Just Build it with <br />
+              BLACKBOX AI
             </h1>
           </RevealFx>
 
