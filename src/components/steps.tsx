@@ -49,12 +49,17 @@ function Tabs() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="w-full max-w-3xl overflow-hidden min-h-[30.5rem]"
+        className="w-full max-w-3xl overflow-hidden flex items-center justify-center"
       >
         <img
           src={tabs[activeTab].image}
           alt={tabs[activeTab].label}
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover absolute"
+        />
+        <img
+          src={tabs[0].image}
+          alt={tabs[activeTab].label}
+          className="w-full h-auto object-cover opacity-0"
         />
       </motion.div>
     </div>
