@@ -49,12 +49,12 @@ function Tabs() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className="w-full max-w-3xl overflow-hidden flex items-center justify-center"
+        className="w-full max-w-3xl overflow-hidden flex items-center justify-center relative"
       >
         <img
           src={tabs[activeTab].image}
           alt={tabs[activeTab].label}
-          className="w-full h-auto object-cover absolute"
+          className="w-full h-auto object-cover absolute bottom-0 left-0"
         />
         <img
           src={tabs[0].image}
