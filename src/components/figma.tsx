@@ -1,10 +1,11 @@
-import { ArrowDown, ArrowRight, Link } from "lucide-react";
+import { Link } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowBigDownDash, ArrowBigRightDash } from "dicons";
 
 export function Figma() {
   return (
     <div className="w-full mt-46 border-b flex items-center justify-center border-[#222] relative overflow-hidden">
-      <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center gap-14 relative">
+      <div className="w-full max-w-[90%] md:min-w-[80%] md:max-w-[80%] flex flex-col items-center justify-center text-center gap-14 relative">
         <motion.h2
           initial={{ filter: "blur(10px)", opacity: 0, translateY: 2 }}
           whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
@@ -53,9 +54,10 @@ export function Figma() {
             whileInView={{ opacity: [0, 1, 0, 1] }}
             transition={{ delay: 1, duration: 1 }}
           >
-            <ArrowRight className="opacity-70 hidden md:block" />
+            {/* <ArrowRight className="opacity-70 hidden md:block" /> */}
+            <ArrowBigRightDash className="hidden md:block" />
           </motion.div>
-          <ArrowDown className="opacity-70 md:hidden" />
+          <ArrowBigDownDash className="md:hidden" />
 
           <motion.div
             initial={{ opacity: 0 }}

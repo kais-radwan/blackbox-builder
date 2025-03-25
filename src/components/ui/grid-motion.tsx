@@ -73,7 +73,7 @@ const GridMotion: FC<GridMotionProps> = ({
       >
         {/* Noise overlay */}
         <div className="absolute inset-0 pointer-events-none z-[4] bg-[url('../../../assets/noise.png')] bg-[length:250px]"></div>
-        <div className="gap-4 flex-none relative w-[150vw] h-[150vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
+        <div className="gap-4 flex-none relative w-[200vw] h-[130vh] grid grid-rows-4 grid-cols-1 rotate-[-15deg] origin-center z-[2]">
           {Array.from({ length: 4 }, (_, rowIndex) => (
             <div
               key={rowIndex}
@@ -86,7 +86,7 @@ const GridMotion: FC<GridMotionProps> = ({
                 const content = combinedItems[rowIndex * 7 + itemIndex];
                 return (
                   <div key={itemIndex} className="relative">
-                    <div className="relative w-full h-full overflow-hidden rounded-[10px] bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
+                    <div className="relative w-full h-full overflow-hidden bg-[#111] flex items-center justify-center text-white text-[1.5rem]">
                       {typeof content === "string" &&
                       content.startsWith("http") ? (
                         <div
