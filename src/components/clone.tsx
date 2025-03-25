@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export function Clone() {
   return (
     <div className="w-full mt-46 border-b flex items-center justify-center border-[#222] relative">
-      <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center">
+      <div className="w-full max-w-[90%] md:min-w-[80%] md:max-w-[80%] flex flex-col items-center justify-center text-center">
         <motion.h2
           initial={{ filter: "blur(10px)", opacity: 0, translateY: 2 }}
           whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
           transition={{ delay: 0.7, duration: 1 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-xl leading-tight"
+          className="text-3xl md:text-4xl lg:text-5xl font-semibold md:max-w-xl leading-tight"
         >
           <span className="text-[#6D7BB6]">Clone</span> Any{" "}
           <span className="text-[#6D7BB6]">Website</span> in One-Click

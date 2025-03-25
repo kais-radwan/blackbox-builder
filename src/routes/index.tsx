@@ -55,7 +55,7 @@ function App() {
         {[...Array(totalSections)].map((_, index) => (
           <div
             key={index}
-            className={`dot transition-all duration-1000 ${activeSection === index ? "active" : ""}`}
+            className={`dot hidden md:flex transition-all duration-1000 ${activeSection === index ? "active" : ""}`}
             onClick={() => scrollToSection(index)}
           />
         ))}
@@ -65,7 +65,7 @@ function App() {
         <Hero />
       </div>
 
-      <div className="mt-36 md:mt-56"></div>
+      <div className="mt-12 md:mt-56"></div>
       <Proof />
 
       <div className="section">

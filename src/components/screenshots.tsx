@@ -41,7 +41,7 @@ const items: unknown[] = [
 export function Screenshots() {
   return (
     <div className="w-full border-b flex items-center justify-center border-[#222] relative h-[80vh] mt-24 border-t">
-      <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center">
+      <div className="w-full min-w-[90%] md:min-w-[80%] md:max-w-[80%] flex flex-col items-center justify-center text-center">
         <div className="relative flex items-center justify-center">
           <motion.h2
             initial={{ filter: "blur(10px)", opacity: 0 }}

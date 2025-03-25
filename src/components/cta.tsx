@@ -21,7 +21,7 @@ export function CallToAction() {
           whileInView={{ filter: "blur(0px)", opacity: 1, translateY: 0 }}
           transition={{ delay: 1, duration: 1 }}
           viewport={{ once: true }}
-          className="text-md text-gray-400 mb-10 max-w-lg mx-auto"
+          className="text-md text-gray-400 mb-10 max-w-xs md:max-w-lg mx-auto"
         >
           Join millions of developers who are already building faster and
           smarter with BLACKBOX AI
@@ -52,8 +52,20 @@ export function CallToAction() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <div className="absolute top-0 left-0 w-64 h-64 bg-[#6D7BB6] rounded-full filter blur-[100px]"></div>
-        <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#263078] rounded-full filter blur-[100px]"></div>
+        <div
+          className="absolute top-0 left-0 w-64 h-64 rounded-full filter blur-[100px]"
+          style={{
+            background:
+              "radial-gradient(circle at center, #6D7BB6, rgba(109, 123, 182, 0))",
+          }}
+        ></div>
+        <div
+          className="absolute bottom-0 right-0 w-64 h-64 rounded-full filter blur-[100px]"
+          style={{
+            background:
+              "radial-gradient(circle at center, #263078, rgba(38, 48, 120, 0))",
+          }}
+        ></div>
       </motion.div>
     </div>
   );
