@@ -1,19 +1,47 @@
-import ImageTrail from "./ui/image-tail";
 import { motion } from "framer-motion";
+import GridMotion from "./ui/grid-motion";
+
+const items: unknown[] = [
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+
+  "https://blackbox-builder.vercel.app/cod.png",
+  "https://blackbox-builder.vercel.app/spotify-app.png",
+  "https://blackbox-builder.vercel.app/yt.png",
+  "https://blackbox-builder.vercel.app/tesla-page.png",
+];
 
 export function Screenshots() {
   return (
-    <div className="w-full border-b flex items-center justify-center border-[#222] relative h-[80vh]">
+    <div className="w-full border-b flex items-center justify-center border-[#222] relative h-[80vh] mt-24 border-t">
       <div className="min-w-[80%] max-w-[80%] flex flex-col items-center justify-center text-center">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-sm opacity-60 z-20"
-        >
-          (hover me and see)
-        </motion.p>
         <div className="relative flex items-center justify-center">
           <motion.h2
             initial={{ filter: "blur(10px)", opacity: 0 }}
@@ -22,9 +50,9 @@ export function Screenshots() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-xl leading-tight z-20"
           >
-            Turn Any <span className="text-[#F24E1E]">Screenshot</span>{" "}
-            <span className="text-[#FFD322]">Into</span> a Functional{" "}
-            <span className="text-[#0ACF83]">Website</span>
+            Turn Any <span className="gradientText">Screenshot</span>{" "}
+            <span className="gradientText">Into</span> a Functional{" "}
+            <span className="gradientText">Website</span>
           </motion.h2>
 
           <motion.h2
@@ -34,12 +62,12 @@ export function Screenshots() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl lg:text-5xl font-semibold max-w-xl leading-tight z-20 absolute"
           >
-            Turn Any <span className="text-[#F24E1E]">Screenshot</span>{" "}
-            <span className="text-[#FFD322]">Into</span> a Functional{" "}
-            <span className="text-[#0ACF83]">Website</span>
+            Turn Any <span className="gradientText">Screenshot</span>{" "}
+            <span className="gradientText">Into</span> a Functional{" "}
+            <span className="gradientText">Website</span>
           </motion.h2>
         </div>
-        <div
+        {/* <div
           style={{
             width: "100%",
             height: "500px",
@@ -52,6 +80,10 @@ export function Screenshots() {
             items={["/cod.png", "/spotify-app.png", "/yt.png", "/brain.png"]}
             variant={1}
           />
+        </div> */}
+        <div className="absolute w-full h-full top-0 left-0 opacity-20">
+          {/** @ts-expect-error no need for */}
+          <GridMotion items={items} />
         </div>
       </div>
     </div>
