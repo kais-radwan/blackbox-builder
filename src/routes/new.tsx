@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { NewHero } from "../components/new/hero";
 import { NewHeader } from "../components/new/header";
+import { NewFigma } from "../components/new/figma";
 
 export const Route = createFileRoute("/new")({
   component: RouteComponent,
@@ -11,6 +12,7 @@ function RouteComponent() {
     <>
       <NewHeader />
       <NewHero />
+      <NewFigma />
 
       <img src="/noise.png" className="fixed top-0 left-0 w-full h-screen object-cover z-10" />
 

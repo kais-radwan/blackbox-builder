@@ -20,10 +20,14 @@ export function Chatbox() {
           <div className="flex items-center gap-4 w-full">
             <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-black rounded-full relative overflow-hidden border border-white/60 flex items-center justify-center">
               {/* <img src="/ai-gradient.gif" className="absolute h-full w-full" /> */}
-              <video autoPlay loop playsInline className="w-full h-[150%] absolute z-10 -bottom-3">
+              <video
+                autoPlay
+                loop
+                playsInline
+                className="w-full h-[150%] absolute z-10 -bottom-3"
+              >
                 <source src="/ai-gradient.mp4" type="video/mp4" />
               </video>
-
             </div>
             <div className="w-full flex items-center relative">
               <input
