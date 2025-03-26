@@ -12,6 +12,7 @@
 
 import { Route as rootRoute } from './routes/__root'
 import { Route as StatusAppImport } from './routes/status-app'
+import { Route as NewImport } from './routes/new'
 import { Route as HulyCloneImport } from './routes/huly-clone'
 import { Route as IndexImport } from './routes/index'
 
@@ -20,6 +21,12 @@ import { Route as IndexImport } from './routes/index'
 const StatusAppRoute = StatusAppImport.update({
   id: '/status-app',
   path: '/status-app',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const NewRoute = NewImport.update({
+  id: '/new',
+  path: '/new',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -53,6 +60,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HulyCloneImport
       parentRoute: typeof rootRoute
     }
+    '/new': {
+      id: '/new'
+      path: '/new'
+      fullPath: '/new'
+      preLoaderRoute: typeof NewImport
+      parentRoute: typeof rootRoute
+    }
     '/status-app': {
       id: '/status-app'
       path: '/status-app'
@@ -68,12 +82,14 @@ declare module '@tanstack/react-router' {
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/huly-clone': typeof HulyCloneRoute
+  '/new': typeof NewRoute
   '/status-app': typeof StatusAppRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/huly-clone': typeof HulyCloneRoute
+  '/new': typeof NewRoute
   '/status-app': typeof StatusAppRoute
 }
 
@@ -81,27 +97,30 @@ export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
   '/huly-clone': typeof HulyCloneRoute
+  '/new': typeof NewRoute
   '/status-app': typeof StatusAppRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/huly-clone' | '/status-app'
+  fullPaths: '/' | '/huly-clone' | '/new' | '/status-app'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/huly-clone' | '/status-app'
-  id: '__root__' | '/' | '/huly-clone' | '/status-app'
+  to: '/' | '/huly-clone' | '/new' | '/status-app'
+  id: '__root__' | '/' | '/huly-clone' | '/new' | '/status-app'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   HulyCloneRoute: typeof HulyCloneRoute
+  NewRoute: typeof NewRoute
   StatusAppRoute: typeof StatusAppRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   HulyCloneRoute: HulyCloneRoute,
+  NewRoute: NewRoute,
   StatusAppRoute: StatusAppRoute,
 }
 
@@ -117,6 +136,7 @@ export const routeTree = rootRoute
       "children": [
         "/",
         "/huly-clone",
+        "/new",
         "/status-app"
       ]
     },
@@ -125,6 +145,9 @@ export const routeTree = rootRoute
     },
     "/huly-clone": {
       "filePath": "huly-clone.tsx"
+    },
+    "/new": {
+      "filePath": "new.tsx"
     },
     "/status-app": {
       "filePath": "status-app.tsx"
