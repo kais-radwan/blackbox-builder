@@ -1,4 +1,4 @@
-import { Figma, Frame, MousePointer2, PointerIcon } from "lucide-react";
+import { Figma, Frame, MousePointer2 } from "lucide-react";
 
 export function NewFigma() {
   return (
