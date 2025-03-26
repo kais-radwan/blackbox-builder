@@ -71,7 +71,7 @@ export function NewFigma() {
               </div>
             </div>
 
-            <MousePointer2 className="absolute bottom-24 right-32" />
+            <MousePointer2 className="absolute bottom-24 right-20 md:right-32" />
 
             <div className="w-full h-full flex flex-col justify-between items-center pt-24 pb-4">
               <div className="flex flex-col gap-1 items-center justify-center relative">
