@@ -3,8 +3,8 @@ import { Figma, Frame, MousePointer2 } from "lucide-react";
 export function NewFigma() {
   return (
     <div className="w-full flex items-center justify-center z-10 md:px-12">
-      <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col lg:flex-row gap-24 lg:gap-0 items-center h-full py-24">
-        <div className="w-full lg:min-w-[45%] lg:max-w-[45%] h-full flex flex-col pr-10">
+      <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col lg:flex-row gap-12 lg:gap-0 items-center h-full py-24">
+        <div className="w-full lg:min-w-[45%] lg:max-w-[45%] h-full flex flex-col md:pr-10">
           <div className="flex items-center w-full">
             <div
               className="w-5 h-5 bg-white rounded-full"
@@ -36,7 +36,7 @@ export function NewFigma() {
           </a>
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center h-full z-20 cursor-default relative overflow-hidden p-2">
+        <div className="w-full flex flex-col items-center justify-center h-full z-20 cursor-default relative overflow-hidden p-2 pb-24">
           <div
             className="w-full bg-black rounded-3xl h-[26.438rem] border border-[#2D2D2D] relative pl-[7rem] md:pl-[10rem] flex items-center justify-center z-10 px-4 md:px-0"
             style={{
@@ -91,8 +91,8 @@ export function NewFigma() {
             playsInline
             loop
             muted
-            className="mt-36 absolute z-0"
-            style={{ filter: "blur(70px)" }}
+            className="mt-12 md:mt-36 absolute z-0"
+            style={{ filter: "blur(60px)" }}
           >
             <source src="/beam-1.webm" />
           </video>
