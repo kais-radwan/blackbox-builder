@@ -88,9 +88,10 @@ export function Chatbox() {
         </div>
 
         {/** border beam */}
+        <div className="opacity-0 absolute animate-spin"></div>
         <div
           className="absolute w-full h-[50%] scale-150 bg-gradient-to-r from-white via-transparent to-transparent rounded-2xl"
-          style={{
+          style={{            
             animation: "spin 10s linear infinite",
           }}
         ></div>
