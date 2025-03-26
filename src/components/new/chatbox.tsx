@@ -32,8 +32,9 @@ export function Chatbox() {
               <div
                 className={cn(
                   "w-full flex items-center gap-1 absolute z-0 transition-all duration-700",
-                  msg ? "blur-[50px] -translate-y-10" : "opacity-100"
+                  msg ? "-translate-y-10" : "opacity-100"
                 )}
+                style={msg ? { filter: "blur(40px)" } : {}}
               >
                 <p className="text-sm opacity-70 -mt-1 min-w-max">Ask BLACKBOX to</p>
                 <RotatingText
