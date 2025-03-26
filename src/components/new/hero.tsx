@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export function NewHero() {
   return (
-    <div className="w-full relative flex flex-col items-center justify-start pt-14 overflow-hidden border-b border-white/20">
+    <div className="w-full min-h-screen relative flex flex-col items-center justify-start pt-14 overflow-hidden border-b border-white/20">
       <RevealFx delay={0.3}>
         <div className="flex items-center justify-center relative overflow-visible">
           <img
