@@ -22,10 +22,11 @@ export function NewHero() {
       </RevealFx>
 
       <div
-        className="w-[400px] h-[400px] absolute rounded-full blur-3xl z-10 opacity-50"
+        className="w-[400px] h-[400px] absolute rounded-full z-10 opacity-50"
         style={{
           background:
             "radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2))",
+            filter: "blur(100px)"
         }}
       ></div>
 
