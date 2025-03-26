@@ -12,7 +12,7 @@ export function NewHero() {
       <RevealFx delay={0.3}>
         <div className="flex items-center justify-center relative overflow-visible">
           <img
-            src="/blackbox-logo-3d.png"
+            src="/blackbox-logo-3d-compressed.png"
             width="300"
             height="300"
             loading="eager"
@@ -102,15 +102,13 @@ export function NewHero() {
         </div>
       </RevealFx>
 
-      <RevealFx delay={0.3} translateY={2} speed="slow" className="h-full -mt-[30%]">
-        <motion.img
-          initial={{ opacity: 0, translateX: 10 }}
-          animate={{ opacity: 0.1, scale: 1, translateX: 0 }}
-          transition={{ duration: 2, delay: 0.4 }}
-          src="/hero-ill-c.png"
-          className="opacity-50 max-w-[80%] md:block z-0"
-        />
-      </RevealFx>
+      <motion.img
+        initial={{ opacity: 0, translateX: 10, filter: "blur(10px)" }}
+        animate={{ opacity: 0.1, scale: 1, translateX: 0, filter: "blur(0px)" }}
+        transition={{ duration: 2, delay: 0.4 }}
+        src="/hero-ill-c.png"
+        className="opacity-50 max-w-[80%] -mt-[32%]"
+      />
     </div>
   );
 }
