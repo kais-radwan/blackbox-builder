@@ -16,7 +16,7 @@ export function Chatbox() {
     >
       <div className="flex items-center justify-center w-full relative p-[1px] overflow-hidden rounded-2xl">
         {/** chatbox */}
-        <div className="w-full h-41 bg-[#0D0C0D] border border-white/30 rounded-2xl z-10 flex flex-col justify-between p-6 pb-4">
+        <div className="w-full h-41 bg-[#0D0C0D] border border-white/30 rounded-2xl z-10 flex flex-col justify-between p-4 md:p-6 pb-4">
           <div className="flex items-center gap-4 w-full">
             <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-black rounded-full relative overflow-hidden border border-white/60 flex items-center justify-center">
               {/* <img src="/ai-gradient.gif" className="absolute h-full w-full" /> */}
@@ -45,8 +45,9 @@ export function Chatbox() {
                 style={msg ? { filter: "blur(40px)" } : {}}
               >
                 <p className="text-sm opacity-70 -mt-1 min-w-max">
-                  Ask BLACKBOX to
+                  Ask BLACKBOX to <span className="md:hidden">build anything</span>
                 </p>
+                <div className="w-full truncate min-w-max max-w-[90%] overflow-hidden">
                 <RotatingText
                   texts={[
                     "build you a landing page",
@@ -56,7 +57,7 @@ export function Chatbox() {
                   ]}
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
-                  className="min-w-max"
+                  className="min-w-max hidden md:flex"
                   animate={{ y: 0 }}
                   exit={{ y: "-120%" }}
                   staggerDuration={0.025}
@@ -64,6 +65,7 @@ export function Chatbox() {
                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
                   rotationInterval={4000}
                 />
+                </div>
               </div>
             </div>
           </div>

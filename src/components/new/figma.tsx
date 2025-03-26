@@ -96,7 +96,7 @@ export function NewFigma() {
           >
             <source src="/beam-1.webm" />
           </video>
-          <video autoPlay playsInline loop muted className="-mt-56 z-0 w-full min-w-[120%] md:min-w-full">
+          <video autoPlay playsInline loop muted className="-mt-36 md:-mt-56 z-0 w-full min-w-[120%] md:min-w-full">
             <source src="/beam-1.webm" />
           </video>
 
