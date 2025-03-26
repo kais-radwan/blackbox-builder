@@ -18,8 +18,12 @@ export function Chatbox() {
         {/** chatbox */}
         <div className="w-full h-41 bg-[#0D0C0D] border border-white/30 rounded-2xl z-10 flex flex-col justify-between p-6 pb-4">
           <div className="flex items-center gap-4 w-full">
-            <div className="min-w-10 max-w-10 min-h-10 max-h-10 rounded-full relative overflow-hidden border border-white/60 flex items-center justify-center">
-              <img src="/ai-gradient.gif" className="absolute h-full w-full" />
+            <div className="min-w-10 max-w-10 min-h-10 max-h-10 bg-black rounded-full relative overflow-hidden border border-white/60 flex items-center justify-center">
+              {/* <img src="/ai-gradient.gif" className="absolute h-full w-full" /> */}
+              <video autoPlay loop playsInline className="w-full h-[150%] absolute z-10 -bottom-3">
+                <source src="/ai-gradient.mp4" type="video/mp4" />
+              </video>
+
             </div>
             <div className="w-full flex items-center relative">
               <input
@@ -36,7 +40,9 @@ export function Chatbox() {
                 )}
                 style={msg ? { filter: "blur(40px)" } : {}}
               >
-                <p className="text-sm opacity-70 -mt-1 min-w-max">Ask BLACKBOX to</p>
+                <p className="text-sm opacity-70 -mt-1 min-w-max">
+                  Ask BLACKBOX to
+                </p>
                 <RotatingText
                   texts={[
                     "build you a landing page",
@@ -92,7 +98,7 @@ export function Chatbox() {
         <div className="opacity-0 absolute animate-spin"></div>
         <div
           className="absolute w-full h-[50%] scale-150 bg-gradient-to-r from-white via-transparent to-transparent rounded-2xl"
-          style={{            
+          style={{
             animation: "spin 10s linear infinite",
           }}
         ></div>
