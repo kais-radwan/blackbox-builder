@@ -40,31 +40,32 @@ export function Chatbox() {
               <div
                 className={cn(
                   "w-full flex items-center gap-1 absolute z-0 transition-all duration-700",
-                  msg ? "-translate-y-10" : "opacity-100"
+                  msg ? "-translate-y-10" : "opacity-100",
                 )}
                 style={msg ? { filter: "blur(40px)" } : {}}
               >
                 <p className="text-sm opacity-70 -mt-1 min-w-max">
-                  Ask BLACKBOX to <span className="md:hidden">build anything</span>
+                  Ask BLACKBOX to{" "}
+                  <span className="md:hidden">build anything</span>
                 </p>
                 <div className="w-full truncate min-w-max max-w-[90%] overflow-hidden">
-                <RotatingText
-                  texts={[
-                    "build you a landing page",
-                    "implement a Figma design",
-                    "clone a website",
-                    "build you a dashboard",
-                  ]}
-                  staggerFrom={"last"}
-                  initial={{ y: "100%" }}
-                  className="min-w-max hidden md:flex"
-                  animate={{ y: 0 }}
-                  exit={{ y: "-120%" }}
-                  staggerDuration={0.025}
-                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1 "
-                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={4000}
-                />
+                  <RotatingText
+                    texts={[
+                      "build you a landing page",
+                      "implement a Figma design",
+                      "clone a website",
+                      "build you a dashboard",
+                    ]}
+                    staggerFrom={"last"}
+                    initial={{ y: "100%" }}
+                    className="min-w-max hidden md:flex"
+                    animate={{ y: 0 }}
+                    exit={{ y: "-120%" }}
+                    staggerDuration={0.025}
+                    splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1 "
+                    transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                    rotationInterval={4000}
+                  />
                 </div>
               </div>
             </div>
@@ -110,9 +111,10 @@ export function Chatbox() {
         ></div>
 
         <div
-          className="absolute w-full h-[50%] scale-150 bg-gradient-to-r from-white via-transparent to-transparent rounded-2xl blur-sm"
+          className="absolute w-full h-[50%] scale-150 bg-gradient-to-r from-white via-transparent to-transparent rounded-2xl"
           style={{
             animation: "spin 10s linear infinite",
+            filter: "blur(10px)",
           }}
         ></div>
       </div>
