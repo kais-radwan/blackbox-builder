@@ -56,7 +56,7 @@ export function Chatbox() {
                       "clone a website",
                       "build you a dashboard",
                     ]}
-                    staggerFrom={"last"}
+                    staggerFrom={"first"}
                     initial={{ y: "100%" }}
                     className="min-w-max hidden md:flex"
                     animate={{ y: 0 }}

@@ -1,6 +1,11 @@
 import { Figma, Frame, MousePointer2 } from "lucide-react";
+import { useState } from "react";
+import { cn } from "../../lib/utils";
+import { motion } from "framer-motion";
 
 export function NewFigma() {
+  const [buttonHovered, setButtonHovered] = useState(false);
+
   return (
     <div className="w-full flex items-center justify-center z-10 md:px-12">
       <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col lg:flex-row gap-12 lg:gap-0 items-center h-full py-24">
@@ -19,7 +24,7 @@ export function NewFigma() {
             Figma to Live <br />
             Website in Seconds
           </h2>
-          <p className="mt-8 lg:max-w-[90%] text-sm md:text-[1.2rem] opacity-70 mb-12 lg:mb-28">
+          <p className="mt-8 lg:max-w-[90%] text-sm md:text-[1.2rem] opacity-70 mb-12 lg:mb-20">
             No waiting. No code. No workarounds.
             <br />
             <br />
@@ -27,13 +32,37 @@ export function NewFigma() {
             seconds
           </p>
 
-          <a
-            href="/"
-            className="flex items-center gap-2 z-20 underline text-lg hover:opacity-80 transition-all"
+          <button
+            onMouseEnter={() => setButtonHovered(true)}
+            onMouseLeave={() => setButtonHovered(false)}
+            className={cn(
+              "p-2 px-4 font-medium bg-white/80 border z-20 border-white text-black rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] relative overflow-hidden flex items-center gap-2 max-w-max",
+            )}
+            style={
+              !buttonHovered
+                ? {
+                    boxShadow: "0px 4px 0px 0px rgba(255, 255, 255, 0.2)",
+                    transition: "box-shadow 0.2s",
+                  }
+                : {
+                    boxShadow: "0px 1px 0px 0px rgba(255, 255, 255, 0.2)",
+                    transition: "box-shadow 0.2s",
+                  }
+            }
           >
-            <Figma size={24} />
-            <span>Get yours built now</span>
-          </a>
+            <Figma size={16} />
+            Get yours built now
+            <motion.div
+              initial={{ x: -50, opacity: 0, filter: "blur(20px)" }}
+              animate={
+                buttonHovered
+                  ? { x: 0, opacity: 0.7, filter: "blur(5px)" }
+                  : { x: -50, opacity: 0, filter: "blur(20px)" }
+              }
+              transition={{ duration: 0.5 }}
+              className="h-64 absolute -top-10 rotate-12 bg-white blur-sm w-4"
+            ></motion.div>
+          </button>
         </div>
 
         <div className="w-full flex flex-col items-center justify-center h-full z-20 cursor-default relative overflow-hidden p-2 pb-24">
