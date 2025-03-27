@@ -24,7 +24,7 @@ export function NewFigma() {
             Figma to Live <br />
             Website in Seconds
           </h2>
-          <p className="mt-8 lg:max-w-[90%] text-sm md:text-[1.2rem] opacity-70 mb-12 lg:mb-20">
+          <p className="mt-8 lg:max-w-[90%] text-sm md:text-[1.2rem] opacity-70 mb-12">
             No waiting. No code. No workarounds.
             <br />
             <br />
@@ -123,17 +123,19 @@ export function NewFigma() {
             className="mt-12 md:mt-36 absolute z-0"
             style={{ filter: "blur(60px)" }}
           >
-            <source src="/beam-1.webm" />
+            <source src="/beam-thick.webm" />
           </video>
-          <video
-            autoPlay
-            playsInline
-            loop
-            muted
-            className="-mt-36 md:-mt-56 z-0 w-full min-w-[120%] md:min-w-full"
-          >
-            <source src="/beam-1.webm" />
-          </video>
+          <div className="w-full flex items-center justify-center relative">
+            <video
+              autoPlay
+              playsInline
+              loop
+              muted
+              className="-mt-36 md:-mt-56 z-0 w-full min-w-[120%] md:min-w-full"
+            >
+              <source src="/beam-thick.webm" />
+            </video>
+          </div>
 
           <div
             className="w-full p-4 px-6 bg-[#0D0C0D] border border-[#2D2D2D] rounded-2xl flex items-center gap-3 z-10 relative"
