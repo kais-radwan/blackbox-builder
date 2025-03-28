@@ -10,9 +10,9 @@ export function NewFigma() {
     <div className="w-full flex items-center justify-center z-10 md:px-12">
       <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col lg:flex-row gap-12 lg:gap-0 items-center h-full py-24">
         <div className="w-full lg:min-w-[45%] lg:max-w-[45%] h-full flex flex-col md:pr-10">
-          <div className="flex items-center w-full">
+          <div className="flex items-center w-full pl-2">
             <div
-              className="w-5 h-5 bg-white rounded-full"
+              className="w-4 h-4 bg-white rounded-full"
               style={{
                 boxShadow:
                   "0px 0px 0px 5px rgba(255, 255, 255, 0.1), 0px 0px 0px 8px rgba(255, 255, 255, 0.1)",
@@ -123,7 +123,7 @@ export function NewFigma() {
             className="mt-12 md:mt-36 absolute z-0"
             style={{ filter: "blur(60px)" }}
           >
-            <source src="/beam-thick.webm" />
+            <source src="/beam-thick-3.webm" />
           </video>
           <div className="w-full flex items-center justify-center relative">
             <video
@@ -133,7 +133,7 @@ export function NewFigma() {
               muted
               className="-mt-36 md:-mt-56 z-0 w-full min-w-[120%] md:min-w-full"
             >
-              <source src="/beam-thick.webm" />
+              <source src="/beam-thick-3.webm" />
             </video>
           </div>
 

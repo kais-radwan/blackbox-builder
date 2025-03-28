@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { RevealFx } from "../ui/reveal";
+import { Logo3dScene } from "./3dlogo";
 import { Chatbox } from "./chatbox";
 import { StarsIcon } from "./icons/stars";
 import { Top1Icon } from "./icons/top1";
@@ -7,9 +9,11 @@ import { LightRays } from "./lights";
 import { motion } from "framer-motion";
 
 export function NewHero() {
+  const [is3dClicking, set3dClicking] = useState(false);
+
   return (
     <div className="w-full min-h-screen relative flex flex-col items-center justify-start pt-14 overflow-hidden">
-      <RevealFx delay={0.3}>
+      {/* <RevealFx delay={0.3}>
         <div className="flex items-center justify-center relative overflow-visible">
           <img
             src="/blackbox-logo-3d-compressed.png"
@@ -19,18 +23,25 @@ export function NewHero() {
             className="z-10"
           />
         </div>
-      </RevealFx>
-
+      </RevealFx> */}
       <div
+        className={`w-[250px] h-[250px] z-20 ${is3dClicking ? "cursor-grabbing" : "cursor-grab"} rounded-full relative flex items-center justify-center`}
+        onMouseDown={() => set3dClicking(true)}
+        onMouseUp={() => set3dClicking(false)}
+      >
+        <Logo3dScene />
+      </div>
+
+      {/* <div
         className="w-[400px] h-[400px] absolute rounded-full z-10 opacity-50"
         style={{
           background:
             "radial-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2))",
-            filter: "blur(100px)"
+          filter: "blur(100px)",
         }}
-      ></div>
+      ></div> */}
 
-      <motion.div className="absolute -top-10 mr-32 pr-10">
+      <motion.div className="absolute -top-10 mr-32 pr-10 z-10">
         <RevealFx>
           <LightRays />
         </RevealFx>

@@ -12,7 +12,10 @@ export function Chatbox() {
       initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
       animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
       transition={{ duration: 0.5, delay: 1.5 }}
-      className="w-full max-w-[90%] md:max-w-[70%] lg:max-w-[50%] p-3 bg-black/3 border border-white/15 rounded-3xl mt-12 z-20 backdrop-blur-3xl flex flex-col gap-4 items-center justify-center"
+      className="w-full max-w-[90%] md:max-w-[70%] lg:max-w-[50%] p-3 bg-black/3 border border-white/15 rounded-3xl mt-12 z-30 flex flex-col gap-4 items-center justify-center"
+      style={{
+        backdropFilter: "blur(30px)",
+      }}
     >
       <div className="flex items-center justify-center w-full relative p-[1px] overflow-hidden rounded-2xl">
         {/** chatbox */}

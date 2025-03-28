@@ -17,7 +17,12 @@ export function NewHeader() {
 
   return (
     <div className="fixed top-0 left-0 w-full h-[4.5rem] border-b flex items-center justify-center border-white/20 z-50">
-      <div className="w-full md:max-w-[80%] px-4 md:px-0 flex items-center justify-between h-full bg-black/60 backdrop-blur-sm">
+      <div
+        className="w-full md:max-w-[80%] px-4 md:px-0 flex items-center justify-between h-full bg-black/60"
+        style={{
+          backdropFilter: "blur(20px)",
+        }}
+      >
         <div className="flex items-center gap-12">
           <a href="/">
             <NewLogo />
@@ -41,7 +46,7 @@ export function NewHeader() {
             onMouseEnter={() => setLoginHovered(true)}
             onMouseLeave={() => setLoginHovered(false)}
             className={cn(
-              "hidden md:flex p-2 px-4 text-sm font-medium bg-white/5 border border-white/10 rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] hover:border-white/20"
+              "hidden md:flex p-2 px-4 text-sm font-medium bg-white/5 border border-white/10 rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] hover:border-white/20",
             )}
             style={
               !loginHovered
@@ -62,7 +67,7 @@ export function NewHeader() {
             onMouseEnter={() => setSignupHovered(true)}
             onMouseLeave={() => setSignupHovered(false)}
             className={cn(
-              "p-2 px-4 text-sm font-medium bg-white/80 border border-white text-black rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] relative overflow-hidden"
+              "p-2 px-4 text-sm font-medium bg-white/80 border border-white text-black rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] relative overflow-hidden",
             )}
             style={
               !signupHovered
