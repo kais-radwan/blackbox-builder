@@ -1,13 +1,4 @@
-import {
-  ChevronLeft,
-  ChevronRight,
-  Copy,
-  Figma,
-  Frame,
-  Menu,
-  MousePointer2,
-  RotateCw,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Copy, Menu, RotateCw } from "lucide-react";
 import { useState } from "react";
 import { cn } from "../../lib/utils";
 import { motion } from "framer-motion";
