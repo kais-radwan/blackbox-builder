@@ -13,12 +13,20 @@ import {
 } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
 
+const Loading = () => {
+  return (
+    <div className="loading">
+      <div className="animate-spin">C</div>
+    </div>
+  );
+};
+
 export const Logo3dScene: React.FC = () => {
   const modelRef = useRef<THREE.Group>(null);
   const gltf = useLoader(GLTFLoader, "/models/logo-26.glb");
 
   return (
-    <Suspense>
+    <Suspense fallback={<Loading />}>
       <Canvas
         shadows
         camera={{ position: [0, 0, 150], fov: 50 }}
