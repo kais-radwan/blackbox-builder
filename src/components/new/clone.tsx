@@ -92,7 +92,7 @@ export function NewClone() {
             playsInline
             loop
             muted
-            className="w-full lg:max-w-[40%] absolute rotate-[90deg] lg:rotate-0"
+            className="w-full lg:max-w-[50%] absolute rotate-[90deg] lg:rotate-0"
           >
             <source src="/moving-rays.webm" />
           </video>

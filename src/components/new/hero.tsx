@@ -35,22 +35,22 @@ export function NewHero() {
     <Suspense fallback={<div className="w-full h-screen"></div>}>
       {" "}
       <div className="w-full min-h-screen relative flex flex-col items-center justify-start pt-14 overflow-hidden">
-        {/* <RevealFx delay={0.3}>
-        <div className="flex items-center justify-center relative overflow-visible">
-          <img
-            src="/blackbox-logo-3d-compressed.png"
-            width="300"
-            height="300"
-            loading="eager"
-            className="z-10"
-          />
-        </div>
-      </RevealFx> */}
+        <RevealFx delay={0.3} className="md:hidden">
+          <div className="flex items-center justify-center relative overflow-visible">
+            <img
+              src="/blackbox-logo-3d-compressed.png"
+              width="300"
+              height="300"
+              loading="eager"
+              className="z-10"
+            />
+          </div>
+        </RevealFx>
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)" }}
           animate={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.5, delay: 1 }}
-          className={`w-[250px] h-[250px] z-20 ${is3dClicking ? "cursor-grabbing" : "cursor-grab"} rounded-full relative flex items-center justify-center`}
+          className={`w-[250px] h-[250px] z-20 hidden md:flex ${is3dClicking ? "cursor-grabbing" : "cursor-grab"} rounded-full relative flex items-center justify-center`}
           onMouseDown={() => set3dClicking(true)}
           onMouseUp={() => set3dClicking(false)}
         >
