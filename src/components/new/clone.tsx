@@ -7,15 +7,15 @@ export function NewClone() {
   const [buttonHovered, setButtonHovered] = useState(false);
 
   return (
-    <div className="w-full flex items-center justify-center z-10 md:px-12">
-      <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-12 lg:gap-0 items-center h-full py-24">
+    <div className="w-full flex items-center justify-center md:px-12 z-30">
+      <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col gap-12 lg:gap-0 items-center h-full py-24 z-20">
         <div className="w-full h-full flex flex-col lg:flex-row lg:pr-10">
           <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-medium leading-tight mt-6 w-full">
             Clone any Website <br />
             in <span className="opacity-70">One-Click</span>
           </h2>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col z-30">
             <p className="mt-8 lg:max-w-[90%] text-sm md:text-[1.2rem] mb-10 md:min-w-sm">
               <span className="opacity-70">Pick any website and make a</span>{" "}
               pixel-perfect{" "}
@@ -133,7 +133,7 @@ export function NewClone() {
             />
           </div>
         </div>
-      </div>
+      </div>{" "}
     </div>
   );
 }

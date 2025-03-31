@@ -35,7 +35,7 @@ export function Chatbox() {
             <div className="w-full flex items-center relative">
               <input
                 autoFocus
-                className="z-10 outline-none"
+                className="z-10 outline-none w-full"
                 type="text"
                 value={msg}
                 onChange={(e) => setMsg(e.target.value)}

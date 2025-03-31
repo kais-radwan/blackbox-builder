@@ -26,7 +26,9 @@ export function NewHero() {
       <>
         <Loading />
         <div className="w-full h-screen opacity-0">
-          <Logo3dScene />
+          <div className="hidden md:block">
+            <Logo3dScene />
+          </div>
         </div>
       </>
     );
