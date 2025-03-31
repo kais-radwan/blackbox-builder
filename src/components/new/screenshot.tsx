@@ -11,10 +11,10 @@ export function NewScreenshot() {
       <div className="w-full max-w-[90%] md:max-w-[80%] flex flex-col lg:flex-row gap-12 lg:gap-0 items-center justify-between h-full py-24">
         <div className="w-full lg:min-w-[45%] lg:max-w-[45%] h-full flex flex-col md:pr-10">
           <h2 className="text-3xl md:text-4xl lg:text-[3rem] font-medium leading-tight mt-6">
-            Turn any Screenshot into a Functional Website
+            Turn any Screenshot into a Functional
           </h2>
           <p className="mt-8 text-sm md:text-[1.2rem] opacity-70 mb-12">
-            Transform any screenshot or image into a working application with
+            Transform any screenshot or image into a functional application with
             one-click
           </p>
 
