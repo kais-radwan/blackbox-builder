@@ -120,21 +120,19 @@ export function NewFigma() {
             playsInline
             loop
             muted
+            src="/beam-thick-3.webm"
             className="mt-12 md:mt-36 absolute z-0"
             style={{ filter: "blur(60px)" }}
-          >
-            <source src="/beam-thick-3.webm" />
-          </video>
+          ></video>
           <div className="w-full flex items-center justify-center relative">
             <video
               autoPlay
               playsInline
               loop
               muted
+              src="/beam-thick-3.webm"
               className="-mt-36 md:-mt-56 z-0 w-full min-w-[120%] md:min-w-full"
-            >
-              <source src="/beam-thick-3.webm" />
-            </video>
+            ></video>
           </div>
 
           <div

@@ -89,13 +89,11 @@ export function NewClone() {
 
           <video
             autoPlay
-            playsInline
             loop
             muted
             className="w-full lg:max-w-[50%] absolute rotate-[90deg] lg:rotate-0"
-          >
-            <source src="/moving-rays.webm" />
-          </video>
+            src="/moving-rays.webm"
+          ></video>
 
           <div
             className="w-full lg:max-w-[40%] lg:min-w-[40%] bg-[#0D0C0D]/50 rounded-3xl border border-[#2D2D2D] relative flex flex-col items-center z-10 mt-24 lg:mt-0 backdrop-blur-2xl"
