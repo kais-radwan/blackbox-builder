@@ -7,7 +7,7 @@ export function NewCTA() {
   const [buttonHovered, setButtonHovered] = useState(false);
 
   return (
-    <div className="w-full flex flex-col items-center gap-6 md:gap-12 py-24 md:pb-0 text-center overflow-hidden max-h-[40rem] lg:max-h-screen relative border-b border-white/20">
+    <div className="w-full flex flex-col items-center gap-6 md:gap-12 py-24 md:pb-0 text-center overflow-hidden max-h-[40rem] lg:max-h-screen relative border-y border-white/20">
       <div
         className="w-96 h-96 absolute bg-[#39406B] rounded-full z-30 -bottom-32"
         style={{ filter: "blur(200px)" }}

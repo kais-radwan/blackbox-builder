@@ -71,8 +71,8 @@ const Underline = `hover:-translate-y-1 border border-[#222] border-dotted round
 
 export function Footer() {
   return (
-    <footer className="border-ali/20 :px-4 mx-auto w-full border-t border-[#222] px-2 md:px-36">
-      <div className="relative mx-auto grid  max-w-7xl items-center justify-center gap-36 p-10 pb-0 md:flex ">
+    <footer className="border-ali/20 :px-4 mx-auto w-full border-t border-[#222] px-2 md:px-36 z-30">
+      <div className="relative mx-auto grid  max-w-7xl items-center justify-center gap-36 p-10 pb-0 md:flex z-20">
         <a
           href="/"
           className="flex items-center justify-center min-w-max font-semibold gap-2"
@@ -88,7 +88,7 @@ export function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 py-10">
         <div className="border-b border-dotted border-[#222]"> </div>
-        <div className="py-10">
+        <div className="py-10 z-20">
           {navigation.categories.map((category) => (
             <div
               key={category.name}

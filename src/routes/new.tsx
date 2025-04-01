@@ -6,6 +6,8 @@ import { NewClone } from "../components/new/clone";
 import { NewScreenshot } from "../components/new/screenshot";
 import { NewSteps } from "../components/new/steps";
 import { NewCTA } from "../components/new/cta";
+import { NewPricing } from "../components/new/pricing";
+import { Footer } from "../components/footer";
 
 export const Route = createFileRoute("/new")({
   component: RouteComponent,
@@ -24,7 +26,9 @@ function RouteComponent() {
       <NewClone />
       <NewScreenshot />
       <NewSteps />
+      <NewPricing />
       <NewCTA />
+      <Footer />
 
       <div className="w-full fixed top-0 left-0 h-screen hidden md:flex items-center justify-center z-10">
         <div className="w-full max-w-[95%] lg:max-w-[90%] flex items-center justify-between h-full">
