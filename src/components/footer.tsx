@@ -198,7 +198,7 @@ export function Footer() {
       </div>
 
       <div className="mx-auto mb-10 mt-10 flex flex-col justify-between text-center text-xs md:max-w-7xl pb-24">
-        <div className="flex flex-row items-center justify-center gap-1 text-slate-600 dark:text-slate-400">
+        <div className="flex flex-row items-center justify-center gap-1 opacity-70">
           <span> © </span>
           <span>{new Date().getFullYear()}</span>
           <span>Made with love by BLACKBOX team - All rights reserved</span>
