@@ -7,7 +7,7 @@ export function NewCTA() {
   const [buttonHovered, setButtonHovered] = useState(false);
 
   return (
-    <div className="w-full flex flex-col items-center gap-6 md:gap-12 pt-24 text-center overflow-hidden max-h-[40rem] lg:max-h-screen relative">
+    <div className="w-full flex flex-col items-center gap-6 md:gap-12 py-24 md:pb-0 text-center overflow-hidden max-h-[40rem] lg:max-h-screen relative border-b border-white/20">
       <div
         className="w-96 h-96 absolute bg-[#39406B] rounded-full z-30 -bottom-32"
         style={{ filter: "blur(200px)" }}
@@ -23,7 +23,7 @@ export function NewCTA() {
         onMouseEnter={() => setButtonHovered(true)}
         onMouseLeave={() => setButtonHovered(false)}
         className={cn(
-          "p-2 px-4 min-h-max min-w-max font-medium bg-white/80 border z-20 border-white text-black rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] relative overflow-hidden flex items-center gap-2 max-w-max",
+          "p-2 px-4 min-h-max min-w-max font-medium bg-white/80 border z-30 border-white text-black rounded-lg transition-all duration-500 cursor-pointer hover:translate-y-[1px] relative overflow-hidden flex items-center gap-2 max-w-max",
         )}
         style={
           !buttonHovered
@@ -56,7 +56,7 @@ export function NewCTA() {
         autoPlay
         muted
         loop
-        className="w-full z-0 -mt-10 md:-mt-32 lg:-mt-40"
+        className="w-full z-0 -mt-10 md:-mt-32 lg:-mt-40 hidden md:flex"
       ></video>
 
       <div className="w-[70%] h-64 bg-gradient-to-b from-transparent to-black absolute bottom-0 left-[15%] z-20"></div>
